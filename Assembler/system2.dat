@@ -1,0 +1,13 @@
+            begin
+            mem_array[i] <= 32'h0;
+            end
+        end
+        else if (~CE && ~WE && A[15:8]==8'b00000000) begin
+            mem_array[A[7:0]][31:0] <= I_O[31:0];
+        end
+
+    end
+
+    assign I_O = I_O_wire;
+
+endmodule

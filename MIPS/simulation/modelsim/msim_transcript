@@ -1,0 +1,231 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do final_project_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/float_add_sub.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:09 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/float_add_sub.sv 
+# -- Compiling module denormalize_24
+# -- Compiling module float_add_sub
+# 
+# Top level modules:
+# 	float_add_sub
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/global_bus.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/global_bus.sv 
+# -- Compiling module global_bus
+# 
+# Top level modules:
+# 	global_bus
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/sext.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/sext.sv 
+# -- Compiling module sext_16
+# 
+# Top level modules:
+# 	sext_16
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/reg_32.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/reg_32.sv 
+# -- Compiling module reg_32
+# 
+# Top level modules:
+# 	reg_32
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/MUX.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/MUX.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux4_1
+# -- Compiling module mux16_1
+# -- Compiling module mux4_1_3b
+# 
+# Top level modules:
+# 	mux2_1
+# 	mux4_1
+# 	mux16_1
+# 	mux4_1_3b
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/ISDU.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/int_mult.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/int_mult.sv 
+# -- Compiling module int_mult
+# 
+# Top level modules:
+# 	int_mult
+# End time: 13:02:10 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/int_div.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:10 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/int_div.sv 
+# -- Compiling module int_div
+# 
+# Top level modules:
+# 	int_div
+# End time: 13:02:11 on Dec 09,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/ALU.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:11 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 13:02:11 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/reg_file.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:11 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/reg_file.sv 
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 13:02:11 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/INTALU.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:11 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/INTALU.sv 
+# -- Compiling module BIGALU
+# 
+# Top level modules:
+# 	BIGALU
+# End time: 13:02:11 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/slc3pp.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:11 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/slc3pp.sv 
+# -- Compiling module slc3pp
+# 
+# Top level modules:
+# 	slc3pp
+# End time: 13:02:12 on Dec 09,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/ece385/final_project {D:/ece385/final_project/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:02:12 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece385/final_project" D:/ece385/final_project/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:02:12 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  cds
+# vsim -gui "+altera" -l msim_transcript -do "final_project_run_msim_rtl_verilog.do" 
+# Start time: 13:02:12 on Dec 09,2016
+# ** Error: (vsim-3170) Could not find 'D:/ece385/final_project/simulation/modelsim/rtl_work.cds'.
+# 
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./final_project_run_msim_rtl_verilog.do PAUSED at line 23
+vsim work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.slc3pp
+# Loading work.ISDU
+# Loading work.BIGALU
+# Loading work.ALU
+# Loading work.int_mult
+# Loading work.int_div
+# Loading work.mux16_1
+# Loading work.global_bus
+# Loading work.reg_file
+# Loading work.reg_32
+# Loading work.mux4_1
+# Loading work.mux2_1
+# Loading work.sext_16
+# Loading work.float_add_sub
+# Loading work.denormalize_24
+add wave -position insertpoint  \
+sim:/testbench/slc/ISDU/state
+add wave -position insertpoint  \
+sim:/testbench/slc/test/clk \
+sim:/testbench/slc/test/reset \
+sim:/testbench/slc/test/select \
+sim:/testbench/slc/test/execute \
+sim:/testbench/slc/test/A \
+sim:/testbench/slc/test/B \
+sim:/testbench/slc/test/out \
+sim:/testbench/slc/test/ready \
+sim:/testbench/slc/test/shift_out_A \
+sim:/testbench/slc/test/shift_out_B \
+sim:/testbench/slc/test/A_sign \
+sim:/testbench/slc/test/B_sign \
+sim:/testbench/slc/test/out_sign \
+sim:/testbench/slc/test/greater \
+sim:/testbench/slc/test/active \
+sim:/testbench/slc/test/A_frac \
+sim:/testbench/slc/test/B_frac \
+sim:/testbench/slc/test/result \
+sim:/testbench/slc/test/frac_diff \
+sim:/testbench/slc/test/A_exp \
+sim:/testbench/slc/test/B_exp \
+sim:/testbench/slc/test/exp_diff \
+sim:/testbench/slc/test/out_exp \
+sim:/testbench/slc/test/status \
+sim:/testbench/slc/test/debug
+restart
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.slc3pp
+# Loading work.ISDU
+# Loading work.BIGALU
+# Loading work.ALU
+# Loading work.int_mult
+# Loading work.int_div
+# Loading work.mux16_1
+# Loading work.global_bus
+# Loading work.reg_file
+# Loading work.reg_32
+# Loading work.mux4_1
+# Loading work.mux2_1
+# Loading work.sext_16
+# Loading work.float_add_sub
+# Loading work.denormalize_24
+run
+# ** Warning: (vsim-8315) D:/ece385/final_project/MUX.sv(62): No condition is true in the unique/priority if/case statement.
+# 
+# End time: 13:20:01 on Dec 09,2016, Elapsed time: 0:17:49
+# Errors: 1, Warnings: 1

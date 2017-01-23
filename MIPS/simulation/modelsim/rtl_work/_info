@@ -1,0 +1,421 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ece385/final_project/simulation/modelsim
+vALU
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1481310131
+!i10b 1
+!s100 CTHB4NfA8A3N<Y?2Q5DG23
+ISWnd91fd]>SSlko:k?U981
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 ALU_sv_unit
+S1
+R0
+w1479964308
+8D:/ece385/final_project/ALU.sv
+FD:/ece385/final_project/ALU.sv
+L0 1
+Z4 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1481310131.337000
+!s107 D:/ece385/final_project/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/ALU.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+D:/ece385/final_project
+n@a@l@u
+vBIGALU
+R1
+R2
+!i10b 1
+!s100 <c157:=6i9]^f<n=zm;4h1
+If`BecY@Qz_zSL8QMiJWA91
+R3
+!s105 INTALU_sv_unit
+S1
+R0
+w1480395628
+8D:/ece385/final_project/INTALU.sv
+FD:/ece385/final_project/INTALU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310131.637000
+!s107 D:/ece385/final_project/INTALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/INTALU.sv|
+!i113 1
+R5
+R6
+n@b@i@g@a@l@u
+vdenormalize_24
+R1
+Z7 !s110 1481310129
+!i10b 1
+!s100 dn3Rmdn]hof8o6iEzLn2^2
+I@Y:bZaH2mi^bYz137P8Y_2
+R3
+Z8 !s105 float_add_sub_sv_unit
+S1
+R0
+Z9 w1481309946
+Z10 8D:/ece385/final_project/float_add_sub.sv
+Z11 FD:/ece385/final_project/float_add_sub.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z12 !s108 1481310129.739000
+Z13 !s107 D:/ece385/final_project/float_add_sub.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/float_add_sub.sv|
+!i113 1
+R5
+R6
+vfloat_add_sub
+R1
+R7
+!i10b 1
+!s100 X`e0GeH[AkDA=b7[dA3GJ1
+IlWjJRRml_CJR9CHZ?_^zh3
+R3
+R8
+S1
+R0
+R9
+R10
+R11
+L0 7
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R5
+R6
+vglobal_bus
+R1
+Z15 !s110 1481310130
+!i10b 1
+!s100 lTUkRZkko4Sb4MJJ[i6??3
+I<c2SCOfDCMmeAHM5Uz7dB2
+R3
+!s105 global_bus_sv_unit
+S1
+R0
+w1480314544
+8D:/ece385/final_project/global_bus.sv
+FD:/ece385/final_project/global_bus.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310130.073000
+!s107 D:/ece385/final_project/global_bus.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/global_bus.sv|
+!i113 1
+R5
+R6
+vint_div
+R1
+R2
+!i10b 1
+!s100 :bbHc4k`3Aoc8=g>C;c@:2
+IlaTXKCH^^2?GimMKYHWe72
+R3
+!s105 int_div_sv_unit
+S1
+R0
+w1480830672
+8D:/ece385/final_project/int_div.sv
+FD:/ece385/final_project/int_div.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310130.970000
+!s107 D:/ece385/final_project/int_div.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/int_div.sv|
+!i113 1
+R5
+R6
+vint_mult
+R1
+R15
+!i10b 1
+!s100 0hCYbMD3Saj9gflVN;Fd63
+IgN@=O@NIMcFVF=Z_C4b0O3
+R3
+!s105 int_mult_sv_unit
+S1
+R0
+w1480639746
+8D:/ece385/final_project/int_mult.sv
+FD:/ece385/final_project/int_mult.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310130.818000
+!s107 D:/ece385/final_project/int_mult.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/int_mult.sv|
+!i113 1
+R5
+R6
+vISDU
+R1
+R15
+!i10b 1
+!s100 8E6@=@3_lcfdIhHUYjYg;1
+Ih>eAQL10fDh`T496_Zg0Y1
+R3
+!s105 ISDU_sv_unit
+S1
+R0
+w1480657720
+8D:/ece385/final_project/ISDU.sv
+FD:/ece385/final_project/ISDU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310130.646000
+!s107 D:/ece385/final_project/ISDU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/ISDU.sv|
+!i113 1
+R5
+R6
+n@i@s@d@u
+vmux16_1
+R1
+R15
+!i10b 1
+!s100 kh1GTiBLYOM_1dNhUFQ4T3
+IihPIW@^;z?=<o<3W0RY5K3
+R3
+Z16 !s105 MUX_sv_unit
+S1
+R0
+Z17 w1480395440
+Z18 8D:/ece385/final_project/MUX.sv
+Z19 FD:/ece385/final_project/MUX.sv
+L0 42
+R4
+r1
+!s85 0
+31
+Z20 !s108 1481310130.465000
+Z21 !s107 D:/ece385/final_project/MUX.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/MUX.sv|
+!i113 1
+R5
+R6
+vmux2_1
+R1
+R15
+!i10b 1
+!s100 ?mO1GAGXb64PZzK@8bQig2
+I`2[ElADHaX`YWEEA@aTDA1
+R3
+R16
+S1
+R0
+R17
+R18
+R19
+L0 1
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+vmux4_1
+R1
+R15
+!i10b 1
+!s100 O9inAiZa[1[=[6MHS4SS62
+I>?aKfX6ie`Z5?km9[UUkb0
+R3
+R16
+S1
+R0
+R17
+R18
+R19
+L0 16
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+vmux4_1_3b
+R1
+R15
+!i10b 1
+!s100 nNf5kb7mJ_<<d:of[gTHz1
+I;4Q^>lFhde@7;1^:h2@ja2
+R3
+R16
+S1
+R0
+R17
+R18
+R19
+L0 82
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+vreg_32
+R1
+R15
+!i10b 1
+!s100 TSmJg7[VP=ehiJeIiS:[D0
+IQR:3@:XZEGSbMe@IbREoi2
+R3
+!s105 reg_32_sv_unit
+S1
+R0
+Z23 w1480307518
+8D:/ece385/final_project/reg_32.sv
+FD:/ece385/final_project/reg_32.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310130.334000
+!s107 D:/ece385/final_project/reg_32.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/reg_32.sv|
+!i113 1
+R5
+R6
+vreg_file
+R1
+R2
+!i10b 1
+!s100 RaZZfVb]gJHCZ8B`gz=mg1
+IN<ILfWM7SC@9gV6i85To51
+R3
+!s105 reg_file_sv_unit
+S1
+R0
+w1480394058
+8D:/ece385/final_project/reg_file.sv
+FD:/ece385/final_project/reg_file.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310131.471000
+!s107 D:/ece385/final_project/reg_file.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/reg_file.sv|
+!i113 1
+R5
+R6
+vsext_16
+R1
+R15
+!i10b 1
+!s100 FV:4naQ[?ckN7ebdHRVE`1
+IDbN=g?nhnFFFJbl1Qh7Vo0
+R3
+!s105 sext_sv_unit
+S1
+R0
+R23
+8D:/ece385/final_project/sext.sv
+FD:/ece385/final_project/sext.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310130.211000
+!s107 D:/ece385/final_project/sext.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/sext.sv|
+!i113 1
+R5
+R6
+vslc3pp
+R1
+R2
+!i10b 1
+!s100 _MC2OF>k>c0aN=1]RJY>K1
+IXc8m1R:6TMbM2QWMcF1nP3
+R3
+!s105 slc3pp_sv_unit
+S1
+R0
+w1480830788
+8D:/ece385/final_project/slc3pp.sv
+FD:/ece385/final_project/slc3pp.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310131.778000
+!s107 D:/ece385/final_project/slc3pp.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/slc3pp.sv|
+!i113 1
+R5
+R6
+vtestbench
+R1
+!s110 1481310132
+!i10b 1
+!s100 Lz45dJS_;<Qo6JR0mNlL10
+IV?FKMKNo`Va>]57OPWn9?3
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1480828842
+8D:/ece385/final_project/testbench.sv
+FD:/ece385/final_project/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1481310132.192000
+!s107 D:/ece385/final_project/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece385/final_project|D:/ece385/final_project/testbench.sv|
+!i113 1
+R5
+R6

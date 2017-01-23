@@ -1,0 +1,648 @@
+Analysis & Synthesis report for final_project
+Fri Dec 09 13:00:08 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |slc3pp|float_add_sub:test|status
+  9. State Machine - |slc3pp|ISDU:ISDU|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "float_add_sub:test"
+ 15. Port Connectivity Checks: "mux2_1:MDR_MUX"
+ 16. Port Connectivity Checks: "mux4_1:ADDR2_MUX"
+ 17. Port Connectivity Checks: "mux4_1:PC_MUX"
+ 18. Port Connectivity Checks: "reg_32:MAR"
+ 19. Port Connectivity Checks: "reg_32:IR"
+ 20. Port Connectivity Checks: "reg_file:REG_FILE|reg_32:reg_i1"
+ 21. Port Connectivity Checks: "reg_file:REG_FILE|reg_32:reg_se"
+ 22. Port Connectivity Checks: "reg_file:REG_FILE|reg_32:reg_ze"
+ 23. Port Connectivity Checks: "BIGALU:BIGALU|mux16_1:BIGALUMUX"
+ 24. Port Connectivity Checks: "ISDU:ISDU"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Dec 09 13:00:08 2016      ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                      ; final_project                              ;
+; Top-level Entity Name              ; slc3pp                                     ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 580                                        ;
+;     Total combinational functions  ; 548                                        ;
+;     Dedicated logic registers      ; 153                                        ;
+; Total registers                    ; 153                                        ;
+; Total pins                         ; 99                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; slc3pp             ; final_project      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+; float_add_sub.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/float_add_sub.sv ;         ;
+; global_bus.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/global_bus.sv    ;         ;
+; sext.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/sext.sv          ;         ;
+; reg_file.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/reg_file.sv      ;         ;
+; reg_32.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/reg_32.sv        ;         ;
+; MUX.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/MUX.sv           ;         ;
+; slc3pp.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/slc3pp.sv        ;         ;
+; ISDU.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/ISDU.sv          ;         ;
+; int_mult.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/int_mult.sv      ;         ;
+; int_div.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/int_div.sv       ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/ALU.sv           ;         ;
+; INTALU.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece385/final_project/INTALU.sv        ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 580       ;
+;                                             ;           ;
+; Total combinational functions               ; 548       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 247       ;
+;     -- 3 input functions                    ; 252       ;
+;     -- <=2 input functions                  ; 49        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 472       ;
+;     -- arithmetic mode                      ; 76        ;
+;                                             ;           ;
+; Total registers                             ; 153       ;
+;     -- Dedicated logic registers            ; 153       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 99        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 153       ;
+; Total fan-out                               ; 2502      ;
+; Average fan-out                             ; 2.78      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+; |slc3pp                        ; 548 (0)           ; 153 (0)      ; 0           ; 0            ; 0       ; 0         ; 99   ; 0            ; |slc3pp                                           ; work         ;
+;    |ISDU:ISDU|                 ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3pp|ISDU:ISDU                                 ; work         ;
+;    |float_add_sub:test|        ; 544 (349)         ; 149 (149)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3pp|float_add_sub:test                        ; work         ;
+;       |denormalize_24:shift_A| ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3pp|float_add_sub:test|denormalize_24:shift_A ; work         ;
+;       |denormalize_24:shift_B| ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3pp|float_add_sub:test|denormalize_24:shift_B ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------+
+; State Machine - |slc3pp|float_add_sub:test|status                                               ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; Name        ; status.0101 ; status.0100 ; status.0011 ; status.0010 ; status.0001 ; status.0000 ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; status.0000 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
+; status.0001 ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
+; status.0010 ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
+; status.0011 ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
+; status.0100 ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
+; status.0101 ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |slc3pp|ISDU:ISDU|state                                                                                                                                                                                                                                                                                                                                                 ;
++-----------------+--------------+--------------+--------------+------------+------------+----------+-----------+-------------+-------------+-----------+------------+------------+----------------+----------------+----------------+----------------+-----------------+-----------------+-----------------+------------+-----------+------------+-----------+--------------+------------+
+; Name            ; state.round3 ; state.round2 ; state.round1 ; state.mvlo ; state.mvhi ; state.mv ; state.ld3 ; state.ld2_r ; state.ld2_w ; state.ld1 ; state.andi ; state.andr ; state.int_div4 ; state.int_div3 ; state.int_div2 ; state.int_div1 ; state.int_mult3 ; state.int_mult2 ; state.int_mult1 ; state.subi ; state.sub ; state.addi ; state.add ; state.decode ; state.halt ;
++-----------------+--------------+--------------+--------------+------------+------------+----------+-----------+-------------+-------------+-----------+------------+------------+----------------+----------------+----------------+----------------+-----------------+-----------------+-----------------+------------+-----------+------------+-----------+--------------+------------+
+; state.halt      ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 0          ;
+; state.decode    ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 1            ; 1          ;
+; state.add       ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 1         ; 0            ; 1          ;
+; state.addi      ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 1          ; 0         ; 0            ; 1          ;
+; state.sub       ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 1         ; 0          ; 0         ; 0            ; 1          ;
+; state.subi      ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 1          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_mult1 ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 1               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_mult2 ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 1               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_mult3 ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 1               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_div1  ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 1              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_div2  ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 1              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_div3  ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 1              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.int_div4  ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 1              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.andr      ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 1          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.andi      ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 1          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.ld1       ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 1         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.ld2_w     ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 1           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.ld2_r     ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 1           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.ld3       ; 0            ; 0            ; 0            ; 0          ; 0          ; 0        ; 1         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.mv        ; 0            ; 0            ; 0            ; 0          ; 0          ; 1        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.mvhi      ; 0            ; 0            ; 0            ; 0          ; 1          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.mvlo      ; 0            ; 0            ; 0            ; 1          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.round1    ; 0            ; 0            ; 1            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.round2    ; 0            ; 1            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
+; state.round3    ; 1            ; 0            ; 0            ; 0          ; 0          ; 0        ; 0         ; 0           ; 0           ; 0         ; 0          ; 0          ; 0              ; 0              ; 0              ; 0              ; 0               ; 0               ; 0               ; 0          ; 0         ; 0          ; 0         ; 0            ; 1          ;
++-----------------+--------------+--------------+--------------+------------+------------+----------+-----------+-------------+-------------+-----------+------------+------------+----------------+----------------+----------------+----------------+-----------------+-----------------+-----------------+------------+-----------+------------+-----------+--------------+------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++---------------------------------------------+----------------------------------------+
+; Register name                               ; Reason for Removal                     ;
++---------------------------------------------+----------------------------------------+
+; float_add_sub:test|A_frac[24]               ; Stuck at GND due to stuck port data_in ;
+; float_add_sub:test|B_frac[24]               ; Stuck at GND due to stuck port data_in ;
+; float_add_sub:test|status~6                 ; Lost fanout                            ;
+; float_add_sub:test|status~7                 ; Lost fanout                            ;
+; float_add_sub:test|status~8                 ; Lost fanout                            ;
+; float_add_sub:test|status~9                 ; Lost fanout                            ;
+; ISDU:ISDU|state~4                           ; Lost fanout                            ;
+; ISDU:ISDU|state~5                           ; Lost fanout                            ;
+; ISDU:ISDU|state~6                           ; Lost fanout                            ;
+; ISDU:ISDU|state~7                           ; Lost fanout                            ;
+; ISDU:ISDU|state~8                           ; Lost fanout                            ;
+; ISDU:ISDU|state~9                           ; Lost fanout                            ;
+; ISDU:ISDU|state.decode                      ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_mult1                   ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.add                         ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.addi                        ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.sub                         ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.subi                        ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.andr                        ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.andi                        ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.mv                          ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.mvhi                        ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.mvlo                        ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.ld1                         ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.ld2_w                       ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.ld2_r                       ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.ld3                         ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_mult2                   ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_mult3                   ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_div1                    ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_div2                    ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_div3                    ; Stuck at GND due to stuck port data_in ;
+; ISDU:ISDU|state.int_div4                    ; Stuck at GND due to stuck port data_in ;
+; BIGALU:BIGALU|int_mult:multiply|active      ; Lost fanout                            ;
+; BIGALU:BIGALU|int_div:division|active       ; Lost fanout                            ;
+; BIGALU:BIGALU|int_mult:multiply|add         ; Lost fanout                            ;
+; BIGALU:BIGALU|int_mult:multiply|cycle[0..4] ; Lost fanout                            ;
+; BIGALU:BIGALU|int_div:division|setup        ; Lost fanout                            ;
+; BIGALU:BIGALU|int_div:division|status       ; Lost fanout                            ;
+; BIGALU:BIGALU|int_div:division|cycle[0..4]  ; Lost fanout                            ;
+; Total Number of Removed Registers = 48      ;                                        ;
++---------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
++-----------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++-----------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; ISDU:ISDU|state.decode                  ; Stuck at GND              ; ISDU:ISDU|state.andr, ISDU:ISDU|state.andi, ISDU:ISDU|state.mv, ISDU:ISDU|state.mvhi, ;
+;                                         ; due to stuck port data_in ; ISDU:ISDU|state.mvlo, ISDU:ISDU|state.ld1, ISDU:ISDU|state.int_mult2,                 ;
+;                                         ;                           ; ISDU:ISDU|state.int_mult3, ISDU:ISDU|state.int_div1, ISDU:ISDU|state.int_div2,        ;
+;                                         ;                           ; ISDU:ISDU|state.int_div3, ISDU:ISDU|state.int_div4,                                   ;
+;                                         ;                           ; BIGALU:BIGALU|int_mult:multiply|active, BIGALU:BIGALU|int_mult:multiply|cycle[3]      ;
+; ISDU:ISDU|state.int_mult1               ; Stuck at GND              ; BIGALU:BIGALU|int_mult:multiply|add, BIGALU:BIGALU|int_mult:multiply|cycle[0],        ;
+;                                         ; due to stuck port data_in ; BIGALU:BIGALU|int_mult:multiply|cycle[1], BIGALU:BIGALU|int_mult:multiply|cycle[2],   ;
+;                                         ;                           ; BIGALU:BIGALU|int_mult:multiply|cycle[4], BIGALU:BIGALU|int_div:division|status       ;
+; BIGALU:BIGALU|int_div:division|cycle[0] ; Lost Fanouts              ; BIGALU:BIGALU|int_div:division|cycle[1], BIGALU:BIGALU|int_div:division|cycle[2],     ;
+;                                         ;                           ; BIGALU:BIGALU|int_div:division|cycle[3]                                               ;
+; ISDU:ISDU|state~7                       ; Lost Fanouts              ; BIGALU:BIGALU|int_div:division|active, BIGALU:BIGALU|int_div:division|setup           ;
+; ISDU:ISDU|state.ld2_w                   ; Stuck at GND              ; ISDU:ISDU|state.ld2_r                                                                 ;
+;                                         ; due to stuck port data_in ;                                                                                       ;
++-----------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 153   ;
+; Number of registers using Synchronous Clear  ; 73    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 136   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|B_sign                             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |slc3pp|BIGALU:BIGALU|int_mult:multiply|cycle[4]              ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |slc3pp|BIGALU:BIGALU|int_div:division|cycle[2]               ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|exp_diff[3]                        ;
+; 9:1                ; 23 bits   ; 138 LEs       ; 46 LEs               ; 92 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|B_frac[13]                         ;
+; 9:1                ; 23 bits   ; 138 LEs       ; 46 LEs               ; 92 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|A_frac[17]                         ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|A_frac[24]                         ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|B_frac[24]                         ;
+; 12:1               ; 23 bits   ; 184 LEs       ; 46 LEs               ; 138 LEs                ; Yes        ; |slc3pp|float_add_sub:test|result[16]                         ;
+; 13:1               ; 7 bits    ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; Yes        ; |slc3pp|float_add_sub:test|out_exp[0]                         ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |slc3pp|float_add_sub:test|denormalize_24:shift_B|ShiftRight0 ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |slc3pp|float_add_sub:test|denormalize_24:shift_B|ShiftRight0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |slc3pp|float_add_sub:test|denormalize_24:shift_B|ShiftRight0 ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; No         ; |slc3pp|float_add_sub:test|Add6                               ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; No         ; |slc3pp|float_add_sub:test|Add6                               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |slc3pp|float_add_sub:test|denormalize_24:shift_B|ShiftRight0 ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |slc3pp|float_add_sub:test|denormalize_24:shift_B|ShiftRight0 ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |slc3pp|ISDU:ISDU|next_state                                  ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |slc3pp|float_add_sub:test|denormalize_24:shift_A|ShiftRight0 ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 25 LEs               ; 5 LEs                  ; No         ; |slc3pp|float_add_sub:test|status                             ;
+; 69:1               ; 8 bits    ; 368 LEs       ; 80 LEs               ; 288 LEs                ; No         ; |slc3pp|ISDU:ISDU|Selector1                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "float_add_sub:test" ;
++--------+-------+----------+--------------------+
+; Port   ; Type  ; Severity ; Details            ;
++--------+-------+----------+--------------------+
+; select ; Input ; Info     ; Stuck at GND       ;
++--------+-------+----------+--------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "mux2_1:MDR_MUX" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; inA  ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "mux4_1:ADDR2_MUX" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; inA  ; Input ; Info     ; Stuck at GND       ;
+; inB  ; Input ; Info     ; Stuck at GND       ;
+; inD  ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "mux4_1:PC_MUX" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; inD  ; Input ; Info     ; Stuck at GND    ;
++------+-------+----------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_32:MAR"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; data_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "reg_32:IR"  ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; load ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file:REG_FILE|reg_32:reg_i1" ;
++----------------+-------+----------+-------------------------+
+; Port           ; Type  ; Severity ; Details                 ;
++----------------+-------+----------+-------------------------+
+; load           ; Input ; Info     ; Stuck at VCC            ;
+; data_in[1..0]  ; Input ; Info     ; Stuck at VCC            ;
+; data_in[31..2] ; Input ; Info     ; Stuck at GND            ;
++----------------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file:REG_FILE|reg_32:reg_se" ;
++----------------+-------+----------+-------------------------+
+; Port           ; Type  ; Severity ; Details                 ;
++----------------+-------+----------+-------------------------+
+; load           ; Input ; Info     ; Stuck at VCC            ;
+; data_in[30..0] ; Input ; Info     ; Stuck at GND            ;
+; data_in[31]    ; Input ; Info     ; Stuck at VCC            ;
++----------------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file:REG_FILE|reg_32:reg_ze" ;
++---------+-------+----------+--------------------------------+
+; Port    ; Type  ; Severity ; Details                        ;
++---------+-------+----------+--------------------------------+
+; load    ; Input ; Info     ; Stuck at VCC                   ;
+; data_in ; Input ; Info     ; Stuck at GND                   ;
++---------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "BIGALU:BIGALU|mux16_1:BIGALUMUX" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; inE  ; Input ; Info     ; Stuck at GND                      ;
+; inF  ; Input ; Info     ; Stuck at GND                      ;
+; inG  ; Input ; Info     ; Stuck at GND                      ;
+; inH  ; Input ; Info     ; Stuck at GND                      ;
+; inI  ; Input ; Info     ; Stuck at GND                      ;
+; inJ  ; Input ; Info     ; Stuck at GND                      ;
+; inK  ; Input ; Info     ; Stuck at GND                      ;
+; inL  ; Input ; Info     ; Stuck at GND                      ;
+; inM  ; Input ; Info     ; Stuck at GND                      ;
+; inN  ; Input ; Info     ; Stuck at GND                      ;
+; inO  ; Input ; Info     ; Stuck at GND                      ;
+; inP  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ISDU:ISDU"                                                                           ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; LD_IR ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 99                          ;
+; cycloneiii_ff         ; 153                         ;
+;     CLR               ; 4                           ;
+;     ENA               ; 64                          ;
+;     ENA SCLR          ; 65                          ;
+;     ENA SCLR SLD      ; 7                           ;
+;     SCLR              ; 1                           ;
+;     plain             ; 12                          ;
+; cycloneiii_lcell_comb ; 548                         ;
+;     arith             ; 76                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 54                          ;
+;     normal            ; 472                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 198                         ;
+;         4 data inputs ; 247                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.46                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Fri Dec 09 12:59:55 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 2 design units, including 2 entities, in source file float_round.sv
+    Info (12023): Found entity 1: left_shift
+    Info (12023): Found entity 2: float_round
+Info (12021): Found 2 design units, including 2 entities, in source file float_cmp.sv
+    Info (12023): Found entity 1: denormalize_23
+    Info (12023): Found entity 2: float_cmp
+Info (12021): Found 2 design units, including 2 entities, in source file float_add_sub.sv
+    Info (12023): Found entity 1: denormalize_24
+    Info (12023): Found entity 2: float_add_sub
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench
+Info (12021): Found 1 design units, including 1 entities, in source file global_bus.sv
+    Info (12023): Found entity 1: global_bus
+Info (12021): Found 1 design units, including 1 entities, in source file sext.sv
+    Info (12023): Found entity 1: sext_16
+Info (12021): Found 1 design units, including 1 entities, in source file reg_file.sv
+    Info (12023): Found entity 1: reg_file
+Info (12021): Found 1 design units, including 1 entities, in source file reg_32.sv
+    Info (12023): Found entity 1: reg_32
+Info (12021): Found 4 design units, including 4 entities, in source file mux.sv
+    Info (12023): Found entity 1: mux2_1
+    Info (12023): Found entity 2: mux4_1
+    Info (12023): Found entity 3: mux16_1
+    Info (12023): Found entity 4: mux4_1_3b
+Info (12021): Found 1 design units, including 1 entities, in source file slc3pp.sv
+    Info (12023): Found entity 1: slc3pp
+Info (12021): Found 1 design units, including 1 entities, in source file isdu.sv
+    Info (12023): Found entity 1: ISDU
+Info (12021): Found 1 design units, including 1 entities, in source file int_mult.sv
+    Info (12023): Found entity 1: int_mult
+Info (12021): Found 1 design units, including 1 entities, in source file int_div.sv
+    Info (12023): Found entity 1: int_div
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file intalu.sv
+    Info (12023): Found entity 1: BIGALU
+Info (12021): Found 1 design units, including 1 entities, in source file int_cmp.sv
+    Info (12023): Found entity 1: int_cmp
+Info (12127): Elaborating entity "slc3pp" for the top level hierarchy
+Info (12128): Elaborating entity "ISDU" for hierarchy "ISDU:ISDU"
+Info (10264): Verilog HDL Case Statement information at ISDU.sv(128): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "BIGALU" for hierarchy "BIGALU:BIGALU"
+Info (12128): Elaborating entity "ALU" for hierarchy "BIGALU:BIGALU|ALU:ALU"
+Info (12128): Elaborating entity "int_mult" for hierarchy "BIGALU:BIGALU|int_mult:multiply"
+Info (12128): Elaborating entity "int_div" for hierarchy "BIGALU:BIGALU|int_div:division"
+Info (12128): Elaborating entity "mux16_1" for hierarchy "BIGALU:BIGALU|mux16_1:BIGALUMUX"
+Info (12128): Elaborating entity "global_bus" for hierarchy "global_bus:G_BUS"
+Info (12128): Elaborating entity "reg_file" for hierarchy "reg_file:REG_FILE"
+Warning (10036): Verilog HDL or VHDL warning at reg_file.sv(6): object "ld_i1" assigned a value but never read
+Info (12128): Elaborating entity "reg_32" for hierarchy "reg_file:REG_FILE|reg_32:reg_ze"
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux4_1:PC_MUX"
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:SR2_MUX"
+Info (12128): Elaborating entity "sext_16" for hierarchy "sext_16:SEXT_16"
+Info (12128): Elaborating entity "float_add_sub" for hierarchy "float_add_sub:test"
+Warning (10036): Verilog HDL or VHDL warning at float_add_sub.sv(22): object "debug" assigned a value but never read
+Info (12128): Elaborating entity "denormalize_24" for hierarchy "float_add_sub:test|denormalize_24:shift_A"
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 25 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "float_add_sub:test|Add10~0"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 679 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 580 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 735 megabytes
+    Info: Processing ended: Fri Dec 09 13:00:08 2016
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
+
+

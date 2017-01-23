@@ -1,0 +1,30 @@
+`include "SLC3PP_2.sv"
+import SLC3PP_2::*;
+
+module test_memory ( input 			clk,
+					 input          reset, 
+                     inout  [31:0]  I_O,
+                     input  [31:0]  A,
+                     input          CE,
+                                    OE,
+                                    WE );
+												
+   parameter size = 256;
+	 
+   logic [31:0] mem_array [size-1:0];
+   logic [31:0] mem_out;
+   logic [31:0] I_O_wire;
+	 
+   assign mem_out = mem_array[A[7:0]];  
+	 
+   always_comb
+   begin
+      I_O_wire = 32'bZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ;
+
+      if (~CE && ~OE && WE) begin
+            I_O_wire[31:0] = mem_out[31:0];
+		end
+   end
+	  
+   always_ff @ (posedge clk or posedge reset) begin
+		if(reset) begin
